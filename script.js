@@ -12,7 +12,7 @@ const facts = {
         "The Nintendo Switch became the fastest-selling console in U.S. history",
         "The gaming industry generates more revenue than movies and sports combined",
         "Minecraft has sold over 238 million copies, making it the best-selling game ever",
-        "The first gaming tournament took place at Stanford University in 1972 for Spacewar!"
+        "The first gaming tournament took1972 for Spacewar!"
     ],
     carsGaming: [
         "Gran Turismo holds the Guinness World Record for the most cars in a racing game series",
@@ -53,6 +53,17 @@ function filterFacts(category) {
     } else if (category === 'cars-gaming') {
         container.innerHTML = createFactSection('Cars in Gaming', facts.carsGaming);
     }
+}
+
+function showRandomFact() {
+    const category = document.getElementById('categorySelect').value;
+    const factArray = category === 'cars-gaming' ? facts.carsGaming : facts[category];
+    const randomIndex = Math.floor(Math.random() * factArray.length);
+    const randomFact = factArray[randomIndex];
+    
+    const factContainer = document.getElementById('random-fact');
+    factContainer.style.display = 'block';
+    factContainer.innerHTML = `<p>${randomFact}</p>`;
 }
 
 // Initialize with all facts
