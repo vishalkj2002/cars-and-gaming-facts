@@ -1,3 +1,4 @@
+// script.js
 const facts = {
     cars: [
         "The first car was created by Karl Benz in 1885",
