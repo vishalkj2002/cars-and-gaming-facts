@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars & Gaming Facts</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<!-- index.html - modify the body section -->
 <body>
     <h1>🏎️ Cars & Gaming Facts 🎮</h1>
+    
+    <div class="fact-form">
+        <h2>Get a Random Fact!</h2>
+        <select id="categorySelect">
+            <option value="cars">Cars</option>
+            <option value="gaming">Gaming</option>
+            <option value="cars-gaming">Cars in Gaming</option>
+        </select>
+        <button onclick="showRandomFact()">Show Fact</button>
+    </div>
+
+    <div id="random-fact"></div>
     
     <div class="filters">
         <button onclick="filterFacts('all')" class="active">All Facts</button>
@@ -20,4 +25,3 @@
 
     <script src="script.js"></script>
 </body>
-</html>
